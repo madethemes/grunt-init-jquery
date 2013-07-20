@@ -9,28 +9,28 @@
 (function($) {
 
   // Collection method.
-  $.fn.awesome = function() {
+  $.fn.{%= name %} = function() {
     return this.each(function(i) {
-      // Do something awesome to each selected element.
-      $(this).html('awesome' + i);
+       // Do something awesome to each selected element.
+       $(this).html('awesome' + i);
     });
   };
 
   // Static method.
-  $.awesome = function(options) {
+  $.{%= name %} = function(options) {
     // Override default options with passed-in options.
-    options = $.extend({}, $.awesome.options, options);
+    options = $.extend({}, $.{%= name %}.options, options);
     // Return something awesome.
     return 'awesome' + options.punctuation;
   };
 
   // Static method default options.
-  $.awesome.options = {
+  $.{%= name %}.options = {
     punctuation: '.'
   };
 
   // Custom selector.
-  $.expr[':'].awesome = function(elem) {
+  $.expr[':'].{%= name %} = function(elem) {
     // Is this element awesome?
     return $(elem).text().indexOf('awesome') !== -1;
   };

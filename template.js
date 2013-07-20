@@ -16,7 +16,7 @@ exports.notes = '_Project name_ should not contain "jquery" or "js" and ' +
   'should be a unique ID not already in use at plugins.jquery.com. _Project ' +
   'title_ should be a human-readable title, and doesn\'t need to contain ' +
   'the word "jQuery", although it may. For example, a plugin titled "Awesome ' +
-  'Plugin" might have the name "awesome-plugin".' +
+  'Plugin" might have the name "AwesomePlugin".' +
   '\n\n'+
   'For more information, please see the following documentation:' +
   '\n\n'+
@@ -86,6 +86,8 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-uglify': '~0.2.0',
         'grunt-contrib-watch': '~0.4.0',
         'grunt-contrib-clean': '~0.4.0',
+        "grunt-contrib-connect": "~0.3.0",
+        "connect-livereload": "~0.2.0"
       },
     });
 
