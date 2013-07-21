@@ -15,7 +15,7 @@ In your web page:
 <script src="dist/{%= name %}.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $.{%= name %}(); // "awesome"
 });
 </script>
 ```
