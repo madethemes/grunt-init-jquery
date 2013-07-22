@@ -96,7 +96,7 @@ module.exports = function(grunt) {
       },
       src: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'qunit', 'clean', 'concat', 'uglify']
+        tasks: ['jshint:src', 'qunit', 'concat', 'uglify']
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -120,6 +120,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['connect:server','jshint', 'qunit', 'clean', 'concat', 'uglify']);
-  grunt.registerTask('demo', ['connect','watch']);
+  grunt.registerTask('demo', ['default','connect:demo','watch']);
 
 };
